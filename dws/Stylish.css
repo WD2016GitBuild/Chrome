@@ -1,0 +1,76 @@
+.w-daily-bg.login-page .login-form.fade-in-effect.in {
+	background-color: transparent;
+	position: relative
+}
+.w-daily-bg.login-page .login-form.fade-in-effect.in:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255,0.8);
+	opacity: .97;
+	position: absolute;
+	top: 0;
+	left: 0
+}
+.w-daily-bg.login-page .login-form.fade-in-effect.in div {
+	position: relative;
+	z-index: 10
+}
+body {
+	background-color: #000 !important;
+	overflow: hidden;
+}
+div.w-bg {
+	animation: bg-ani 12s linear infinite;
+	animation:none;
+	animation-direction: alternate-reverse;
+	opacity: 1;
+	background: url(http://280.300.cn/wd/boss/webs/bg.jpg) no-repeat center center !important;
+	background-size: cover;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+}
+@keyframes bg-ani {
+	from {
+		transform: scale(1.1);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+#login-btn {
+	position: fixed;
+	top: 180px;
+	right: 10px;
+	width: 30vw;
+	height: auto;
+	z-index: 100;
+	text-align: right;
+}
+#login-btn a {
+	width: auto;
+	margin-bottom: 10px;
+	background-color: #fff;
+	background-image: linear-gradient(to right, #7028e4 0%, #e5b2ca 100%);
+	color: #333;
+	color: #fff;
+	padding: 9px 50px;
+	display: inline-block;
+	position: relative;
+	left: 500px;
+	transition: .3s;
+	text-decoration: none;
+	border-radius: 50px;
+}
+#login-btn a:hover {
+	background-color: #e33;
+	color: #fff;
+}
+.loaded #login-btn a {
+	left: 0px;
+}
