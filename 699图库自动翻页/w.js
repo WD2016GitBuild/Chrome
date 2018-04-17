@@ -13,7 +13,6 @@
     var s = document.createElement("script");
     document.querySelector("head").appendChild(s);
     var step = 1;
-    var current = 1;
     var container;
     s.onload = function() {
         $(".RightNav").hide();
@@ -23,12 +22,14 @@
         if($(".pager-linkPage a").length < 1) {
             return;
         }
-        $("head").append('<style>.imgshow .list{width: calc((100% - 4px*8)/4) !important;}</style>');
+        $(".pagelist").hide();
+        $("head").append('<style>.imgshow .list{width: calc((100% - 4px*8*2)/8) !important;height:300px !important;}</style>');
         $("head").append('<style>.imgshow .list img{height:100%;object-fit:cover;}</style>');
-        var total = $(".pager-linkPage a:last").text();
         container = $(".swipeboxEx");
         $(window).scroll(function() {
-            checkFooter();
+            if($(window).height() + $(window).scrollTop() > $("#footer").offset().top - 200) {
+                load();
+            }
         });
     };
     s.src = "http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js";
@@ -52,11 +53,5 @@
                 step = 1;
             }
         });
-    }
-    function checkFooter() {
-        var footer_top = $("#footer").offset().top;
-        if($(window).height() + $(window).scrollTop() > footer_top) {
-            load();
-        }
     }
 })();
