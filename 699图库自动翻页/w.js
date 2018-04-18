@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         699滚动加载数据
+// @name         699图库自动加载下一页数据
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  try to take over the world!
@@ -14,6 +14,7 @@
     document.querySelector("head").appendChild(s);
     var step = 1;
     var container;
+    var loaded = true;
     s.onload = function() {
         $(".RightNav").hide();
         if($(".imgshow .list").length == 0) {
@@ -28,7 +29,10 @@
         container = $(".swipeboxEx");
         $(window).scroll(function() {
             if($(window).height() + $(window).scrollTop() > $("#footer").offset().top - 200) {
-                load();
+                if(loaded) {
+                    loaded = false;
+                    load();
+                }
             }
         });
     };
@@ -50,6 +54,7 @@
             if(step > 0) {
                 load();
             } else {
+                loaded = true;
                 step = 1;
             }
         });
