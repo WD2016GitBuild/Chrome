@@ -1,0 +1,63 @@
+
+<html>
+	<head>
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="test.css"/>
+		<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+		<script type="text/javascript">
+			$(()=>{
+				var inspection = ()=>{
+					var a = $(".w-inspection");
+					if(!a.length) {
+						return;
+					}
+					var b = a.find(".switch");
+					b.click(()=>{
+						b.toggleClass("on");
+					});
+					
+					
+				}
+				inspection();
+			});
+		</script>
+	</head>
+	<body>
+		<div class="w-inspection">
+			<div class="status">
+				<span>质检</span>
+				<div class="switch">
+					<b></b>
+				</div>
+			</div>
+			<div class="list">
+				<div class="a">
+					<div class="item">
+						<span>都江堰市江宁机械有限公司</span>
+						<b>设计中</b>
+					</div>
+					<div class="clear"></div>
+					<div class="item">
+						<span>四川华伟家具有限公司</span>
+						<b class="make">制作中</b>
+					</div>
+					<div class="clear"></div>
+					<div class="item">
+						<span>成都通川消防安全工程公司</span>
+						<b>设计中</b>
+					</div>
+					<div class="clear"></div>
+					<div class="item">
+						<span>中企宝丝测试有限公司</span>
+						<b>设计中</b>
+					</div>
+					<div class="clear"></div>
+					<div class="item">
+						<span>广汉市福旺油脂有限公司</span>
+						<b class="publish">待发布</b>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
