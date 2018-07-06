@@ -1,0 +1,22 @@
+[
+	{
+		"enabled": true,
+		"updateUrl": null,
+		"md5Url": null,
+		"url": null,
+		"originalMd5": null,
+		"name": "keybr",
+		"sections": [
+			{
+				"code": "body > div > aside {\n\tdisplay:none;\n}\n\n\nbody > header {\n\tdisplay:none;\n}\n\n#App > article {\n\tdisplay:none;\n}\n\nbody > footer {\n\tdisplay:none;\n}",
+				"urls": [],
+				"urlPrefixes": [
+					"https://www.keybr.com/"
+				],
+				"domains": [],
+				"regexps": []
+			}
+		],
+		"id": 1
+	}
+]
